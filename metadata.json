@@ -2,7 +2,6 @@
   "name": "Fast Folder",
   "description": "Menu to quickly open folder location in nautilus",
   "uuid": "fastfolder@scottdiemer.gmail.com",
-  "shell-version": [
-    "41"
-  ]
+  "url": "https://github.com/scottdiemer/FastFolderGnomeExtension",
+  "shell-version": ["41"]
 }

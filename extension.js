@@ -33,20 +33,26 @@ const _ = ExtensionUtils.gettext;
 const Indicator = GObject.registerClass(
   class Indicator extends PanelMenu.Button {
     _init() {
-      super._init(0.0, _("My Shiny Indicator"));
+      super._init(0);
 
       this.add_child(
         new St.Icon({
-          icon_name: "face-smile-symbolic",
+          icon_name: "folder=saved-search",
           style_class: "system-status-icon",
         })
       );
 
-      let item = new PopupMenu.PopupMenuItem(_("Show Notification"));
-      item.connect("activate", () => {
-        Main.notify(_("Whatʼs up, folks?"));
-      });
+      let item = new PopupMenu.PopupMenuItem("Hello");
       this.menu.addMenuItem(item);
+
+      this.menu.addMenuItem(new PopupMenu.PopupMenuItem("hello 2"));
+      this.menu.addMenuItem(new PopupMenu.PopupMenuItem("hello 3"));
+      this.menu.addMenuItem(new PopupMenu.PopupMenuItem("hello 4"));
+      this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+      this.menu.addMenuItem(new PopupMenu.PopupMenuItem("hello 5"));
+      this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+      this.menu.addMenuItem(new PopupMenu.PopupMenuItem("hello 4"));
+      this.menu.addMenuItem(new PopupMenu.PopupMenuItem("hello 5"));
     }
   }
 );
